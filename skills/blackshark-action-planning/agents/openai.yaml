@@ -1,0 +1,4 @@
+interface:
+  display_name: "BlackShark Action Planning"
+  short_description: "将已定方向转成完整动作、依赖、优先级与验收边界"
+  default_prompt: "使用 $blackshark-action-planning，继承已确认决定与授权，把当前方向整理成不截断依赖的可执行动作。"

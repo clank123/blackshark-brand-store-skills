@@ -1,0 +1,4 @@
+interface:
+  display_name: "BlackShark Project Handoff"
+  short_description: "按复杂度生成轻量交接、协同交接或复杂项目包"
+  default_prompt: "使用 $blackshark-project-handoff，在继承已有决定和授权的前提下，生成最小但可执行的交接。"

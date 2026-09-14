@@ -1,0 +1,4 @@
+interface:
+  display_name: "BlackShark Operating Review"
+  short_description: "分层复盘执行与结果，并直接更新原问题状态"
+  default_prompt: "使用 $blackshark-operating-review，按证据分层复盘当前结果并更新原问题；证据不足时保留未知，不强造动作或规则。"

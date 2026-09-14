@@ -1,0 +1,4 @@
+interface:
+  display_name: "黑鲨品牌与门店经营策略"
+  short_description: "连接品牌目的、门店角色、顾客旅程、资源取舍与证据"
+  default_prompt: "使用 $blackshark-brand-store-strategy，把当前品牌、产品或门店问题整理成有边界的策略判断或方案。"

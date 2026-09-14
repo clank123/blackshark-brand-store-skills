@@ -1,0 +1,49 @@
+{
+  "example_type": "synthetic",
+  "notice": "Entirely fictional. No real organization, person, location, operating result or private system is represented.",
+  "task": {
+    "intent": "design",
+    "question": "How should two stores support a shared product introduction while preserving their different customer occasions?",
+    "decision_status": "open"
+  },
+  "confirmed_decisions": [
+    "Use one shared product story while preserving distinct store occasions."
+  ],
+  "non_goals": [
+    "No pricing decision is requested.",
+    "No message, publication or external system change is requested."
+  ],
+  "authority": {
+    "analysis": "authorized",
+    "drafting": "authorized",
+    "external_actions": "not_authorized"
+  },
+  "brand": {
+    "id": "demo-brand",
+    "promise": "A straightforward place to discover and enjoy well-made refreshments.",
+    "objective": "Help customers understand the new product and choose an appropriate store occasion."
+  },
+  "stores": [
+    {
+      "id": "store-a",
+      "role": "convenient neighborhood visits",
+      "lifecycle_stage": "ongoing_operations",
+      "occasion": "A short break during the day",
+      "constraint": "The service flow must remain quick."
+    },
+    {
+      "id": "store-b",
+      "role": "guided product discovery",
+      "lifecycle_stage": "ongoing_operations",
+      "occasion": "A planned tasting with friends",
+      "constraint": "Guided sessions require available trained staff."
+    }
+  ],
+  "evidence": {
+    "available": ["A fictional product description and stated service constraints"],
+    "missing": ["Customer response", "Observed demand", "Incremental costs and outcomes"],
+    "conclusion_limit": "A proposal can be drafted; commercial effectiveness cannot be asserted."
+  },
+  "responsibility_roles": ["brand owner", "store operator", "content coordinator"],
+  "requested_output": "A concise proposal identifying store roles, key customer steps, resource dependencies and evidence to collect."
+}
