@@ -30,10 +30,10 @@ Install all five skills globally for every supported agent environment detected 
 npx skills add clank123/blackshark-brand-store-skills --all -g
 ```
 
-Update all globally installed skills later with the following command. This update is not limited to this package:
+Update only this collection by reinstalling it from the same source:
 
 ```bash
-npx skills update -g
+npx skills add clank123/blackshark-brand-store-skills --all -g
 ```
 
 The installer detects the supported agent environments on the current machine. Open a new agent session after installation or update so the refreshed skills are loaded.
@@ -45,5 +45,7 @@ Business-specific context is supplied by the user for the current task. Real org
 [The example context](examples/business-context.synthetic.json) and the [end-to-end synthetic walkthrough](examples/end-to-end.synthetic.md) are entirely fictional. They illustrate one possible input and workflow, not a required exhaustive form or evidence of business performance.
 
 ## Release status
+
+Current numbered release: **v0.1.0**. See [changes](CHANGELOG.md) and [releases](https://github.com/clank123/blackshark-brand-store-skills/releases).
 
 Released under the [Apache License 2.0](LICENSE). This package provides agent instructions and examples; it does not prove business outcomes or authorize external actions.
