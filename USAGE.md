@@ -2,22 +2,22 @@
 
 [中文版本](USAGE.zh-CN.md)
 
-This package contains five standalone agent skills. Use only the skill needed for the current task, or connect them into an end-to-end operating flow. The package does not require a particular private knowledge repository, local path or collaboration platform.
+This package contains five operating core skills and one optional explanation skill. Use only the skill needed for the current task, or connect them into an end-to-end operating flow. The package does not require a particular private knowledge repository, local path or collaboration platform.
 
 This repository is released under the [Apache License 2.0](LICENSE).
 
 ## Install and update
 
-Install all five skills globally for every supported agent environment detected by the Skills CLI:
+Install all six skills globally for every supported agent environment detected by the Skills CLI:
 
 ```bash
 npx skills add clank123/blackshark-brand-store-skills --all -g
 ```
 
-To update all globally installed skills later, not only the skills from this package:
+To update this collection, reinstall it from the same source:
 
 ```bash
-npx skills update -g
+npx skills add clank123/blackshark-brand-store-skills --all -g
 ```
 
 Open a new agent session after installation or update so the refreshed skills are loaded.
@@ -31,6 +31,7 @@ Open a new agent session after installation or update so the refreshed skills ar
 | Turn an agreed direction into complete work without hiding dependencies | `blackshark-action-planning` | A full action structure plus a separate priority view |
 | Prepare work for one person or a collaborating team | `blackshark-project-handoff` | A handoff shape proportionate to responsibility and risk |
 | Compare expectations, execution and outcomes | `blackshark-operating-review` | An evidence-bounded decision to continue, adjust, complete or stop |
+| Understand a difficult work passage in context, on request | `blackshark-plain-language` | An explanation that preserves intent and helps the reader continue |
 
 Each skill can be used independently. A simple, already-approved task does not need to pass through all five skills.
 
@@ -94,3 +95,9 @@ Approved low-risk change:
 Evidence-bounded review:
 
 > Use `blackshark-operating-review` to compare the expected customer behavior with the observed evidence. Keep commercial effectiveness unknown where no result was measured.
+
+Explicit explanation request:
+
+> Use $blackshark-plain-language to explain this task in the context of my role. Tell me what it means and how I can start, without inventing missing decisions.
+
+The explanation skill returns to the original task afterward. Natural-language invocation through a workspace requires a connected router; the standalone explicit invocation above does not depend on one.

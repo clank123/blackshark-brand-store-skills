@@ -2,22 +2,22 @@
 
 [English](USAGE.md)
 
-这是一套连接品牌策略与门店经营的 Agent Skills，共有五个 Skill。你可以只调用当前需要的一个，也可以把五个串成完整流程。简单、已获授权的任务不必依次调用全部五个 Skill。
+这是一套连接品牌策略与门店经营的 Agent Skills，包含五个经营核心 Skill 和一个可选的“大白话”解释 Skill。你可以只调用当前需要的一个，也可以把五个串成完整流程。简单、已获授权的任务不必依次调用全部五个 Skill。
 
 本仓库使用 [Apache License 2.0](LICENSE) 开源。
 
 ## 安装与更新
 
-首次使用时，通过 Skills CLI 把全部五个 Skill 安装到它检测到的所有受支持 Agent 环境：
+首次使用时，通过 Skills CLI 把全部六个 Skill 安装到它检测到的所有受支持 Agent 环境：
 
 ```bash
 npx skills add clank123/blackshark-brand-store-skills --all -g
 ```
 
-以后更新所有全局安装的 Skill（不只更新本包）：
+以后更新本套 Skill，重新安装同一来源：
 
 ```bash
-npx skills update -g
+npx skills add clank123/blackshark-brand-store-skills --all -g
 ```
 
 安装或更新后，请新开一个 Agent 会话，让最新 Skill 被重新加载。仅仅 `git pull` 只会更新源码；通过上面的 Skills CLI 安装和更新，更适合同事直接使用。
@@ -31,6 +31,7 @@ npx skills update -g
 | 把已经确认的方向变成完整动作，同时看清依赖和优先级 | `blackshark-action-planning` | 完整动作结构，以及与其分开的优先级视图 |
 | 把任务交给一个人或一个协作团队执行 | `blackshark-project-handoff` | 与责任和风险相匹配的交接稿 |
 | 结果回来后，判断继续、调整、完成还是停止 | `blackshark-operating-review` | 不超出证据的复盘结论和后续决定 |
+| 主动请 AI 解释难懂的词句或任务 | `blackshark-plain-language` | 结合你的岗位和当前事情，讲清意思以及怎样继续 |
 
 如果你只是要把一个已经确认、风险较低的小改动交给执行人，通常可以直接使用 `blackshark-project-handoff`，不需要先走完整流程。
 
@@ -94,3 +95,9 @@ Gate 是决定条件，不等于会议或审批。信息不足时，应缩小相
 证据有限的复盘：
 
 > 使用 `blackshark-operating-review`，比较预期顾客行为和目前观察到的证据。没有测量到的经营效果继续标记为未知。
+
+主动召唤“大白话”：
+
+> 用 $blackshark-plain-language 解释这条任务。我负责页面设计，想知道这句话是什么意思，以及我先做什么。
+
+在接入新版的黑鲨团队工作台中，也可直接说“这条任务没看懂，结合我的工作讲一下”。单独安装时可用上面的明确调用；自然语言入口取决于宿主是否接通路由。解释完就回到原任务，不会因文件有专业词而强行介入，也不会替你执行原任务或修改原文件。

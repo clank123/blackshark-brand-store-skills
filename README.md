@@ -10,7 +10,7 @@ An open-source collection of agent skills for connecting brand strategy with sto
 
 The intended capabilities cover opening, ongoing operations, campaigns, repeat visits, structural adjustments and multi-store coordination. Each task should use the parts it needs; a simple handoff should remain simple.
 
-The planned core skills are:
+The five operating core skills are:
 
 - `blackshark-brand-store-strategy`: connect brand objectives, store roles, customer journeys and resource choices.
 - `blackshark-operating-validation`: define the evidence needed for a decision and distinguish outcomes from assumptions.
@@ -20,11 +20,13 @@ The planned core skills are:
 
 All five cores have been tested in a local installation. They preserve confirmed decisions and authority, scale the handoff shape to the work, retain complete dependencies behind any priority view, and keep readiness, business effect and method reliability separate.
 
+An optional support skill, `blackshark-plain-language` (黑鲨大白话), explains difficult work material in context when explicitly requested. It is available alongside the five cores, not a required sixth stage. Invoke it with `$blackshark-plain-language` and the passage; connected workspace routers may also recognize a direct request such as “这条任务没看懂，告诉我先做什么”.
+
 ## Getting started
 
 Read the [Usage guide](USAGE.md) or [中文使用说明](USAGE.zh-CN.md) to choose one skill or connect all five. The [end-to-end synthetic walkthrough](examples/end-to-end.synthetic.md) shows how an open question becomes a strategy, validation contract, action plan, handoff and evidence-bounded review.
 
-Install all five skills globally for every supported agent environment detected by the Skills CLI:
+Install all six skills globally for every supported agent environment detected by the Skills CLI:
 
 ```bash
 npx skills add clank123/blackshark-brand-store-skills --all -g
@@ -46,6 +48,6 @@ Business-specific context is supplied by the user for the current task. Real org
 
 ## Release status
 
-Current numbered release: **v0.1.0**. See [changes](CHANGELOG.md) and [releases](https://github.com/clank123/blackshark-brand-store-skills/releases).
+Current numbered release: **v0.2.0**. See [changes](CHANGELOG.md) and [releases](https://github.com/clank123/blackshark-brand-store-skills/releases).
 
 Released under the [Apache License 2.0](LICENSE). This package provides agent instructions and examples; it does not prove business outcomes or authorize external actions.

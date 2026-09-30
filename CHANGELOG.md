@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0 — 2026-09-30
+
+- Add BlackShark Plain Language as an optional support skill: explain a difficult passage using the reader’s role, current task and existing decisions.
+- Invoke it on an explicit explanation request, then return to the original work. Preserve missing decisions as unknown rather than inventing instructions.
+- Keep the five operating cores unchanged; explanation is not another required workflow stage.
+- Scope the documented update command to this collection.
+
 ## 0.1.0 — 2026-09-29
 
 First numbered release of the existing public collection.
